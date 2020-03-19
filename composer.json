@@ -18,7 +18,7 @@
     "nwidart/laravel-modules": "^4.0",
     "laravelcollective/html": "5.8.*",
     "laracasts/presenter": "~0.2",
-    "astrotomic/laravel-translatable": "11.8",
+    "dimsav/laravel-translatable": "~9.0",
     "mcamara/laravel-localization": "1.3.16",
     "floatingpoint/stylist": "~0.5",
     "maatwebsite/laravel-sidebar": "~2.1",
@@ -27,7 +27,7 @@
   },
   "require-dev": {
     "phpunit/phpunit": "~7.2",
-    "orchestra/testbench": "3.8.0",
+    "orchestra/testbench": "~3.8.0",
     "mockery/mockery": "^1.0",
     "friendsofphp/php-cs-fixer": "^2.12"
   },
