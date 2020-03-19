@@ -39,6 +39,5 @@
       "Modules\\": "Modules/"
     }
   },
-  "minimum-stability": "dev",
   "prefer-stable": true
 }
