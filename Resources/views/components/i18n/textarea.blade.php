@@ -7,7 +7,7 @@
 <div class='{{ $errors->has("{$lang}.{$fieldName}") ? ' has-error' : '' }}'>
     {!! Form::label("{$lang}[{$fieldName}]", $labelName) !!}
     <textarea class="{{ $editor->getEditorClass() }}" name="{{$lang}}[{{$fieldName}}]" id="{{$lang}}[{{$fieldName}}]" rows="10" cols="80">{{ $slot }}</textarea>
-    {!! $errors->first("{$lang}.{$fieldName}", '<span class="help-block">:message</span>') !!}
+    {!! $errors->first("{$lang}.{$fieldName}", '<div class="invalid-feedback">:message</div>') !!}
 </div>
 
 @if ($editor->getEditorJsPartial() !== null)

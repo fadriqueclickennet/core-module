@@ -43,7 +43,6 @@ class CoreServiceProvider extends ServiceProvider
             'auth.admin'            => 'AdminMiddleware',
             'public.checkLocale'    => 'PublicMiddleware',
             'localizationRedirect'  => 'LocalizationMiddleware',
-            'localeSessionRedirect' => 'LocaleSessionRedirectMiddleware',
             'can' => 'Authorization',
         ],
     ];
@@ -173,7 +172,7 @@ class CoreServiceProvider extends ServiceProvider
 
             $themes = [
                 'backend' => $themeManager->find(config('asgard.core.core.admin-theme'))->getPath(),
-                'frontend' => $themeManager->find(setting('core::template', null, 'Flatly'))->getPath(),
+                'frontend' => $themeManager->find(setting('core::template', null, 'FrontendClickennet'))->getPath(),
             ];
         }
 

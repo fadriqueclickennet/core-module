@@ -213,12 +213,4 @@ abstract class EloquentBaseRepository implements BaseRepository
     {
         return $this->model->with($relationships);
     }
-
-    /**
-     * @inheritdoc
-     */
-    public function whereIn(string $field, array $values) : Builder
-    {
-        return $this->model->whereIn($field, $values);
-    }
 }

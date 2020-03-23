@@ -1,12 +1,12 @@
 <template>
-    <el-button type="danger" size="mini" @click="deleteRow"><i class="fa fa-trash"></i></el-button>
+    <el-button type="danger" @click="deleteRow" size="mini"><i class="fa fa-trash"></i></el-button>
 </template>
 
 <script>
     export default {
         props: {
-            rows: { default: null, type: Array },
-            scope: { default: null, type: Object },
+            rows: { default: null },
+            scope: { default: null },
         },
         data() {
             return {
@@ -14,12 +14,8 @@
                 deleteTitle: '',
             };
         },
-        mounted() {
-            this.deleteMessage = this.trans('core.modal.confirmation-message');
-            this.deleteTitle = this.trans('core.modal.title');
-        },
         methods: {
-            deleteRow() {
+            deleteRow(event) {
                 this.$confirm(this.deleteMessage, this.deleteTitle, {
                     confirmButtonText: this.trans('core.button.delete'),
                     cancelButtonText: this.trans('core.button.cancel'),
@@ -51,6 +47,10 @@
                     });
                 });
             },
+        },
+        mounted() {
+            this.deleteMessage = this.trans('core.modal.confirmation-message');
+            this.deleteTitle = this.trans('core.modal.title');
         },
     };
 </script>

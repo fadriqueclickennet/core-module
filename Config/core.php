@@ -1,11 +1,11 @@
 <?php
 
 return [
-    /*
-    |--------------------------------------------------------------------------
-    | The prefix that'll be used for the administration
-    |--------------------------------------------------------------------------
-    */
+   /*
+   |--------------------------------------------------------------------------
+   | The prefix that'll be used for the administration
+   |--------------------------------------------------------------------------
+   */
     'admin-prefix' => 'backend',
 
     /*
@@ -20,30 +20,30 @@ return [
     | Which administration theme to use for the back end interface
     |--------------------------------------------------------------------------
     */
-    'admin-theme' => 'AdminLTE',
+    'admin-theme' => 'BackendClickennet',
 
     /*
     |--------------------------------------------------------------------------
-    | AdminLTE skin
+    | BackendClickennet skin
     |--------------------------------------------------------------------------
-    | You can customize the AdminLTE colors with this setting. The following
+    | You can customize the BackendClickennet colors with this setting. The following
     | colors are available for you to use: skin-blue, skin-green,
     | skin-black, skin-purple, skin-red and skin-yellow.
     */
     'skin' => 'skin-blue',
 
-    /*
-    |--------------------------------------------------------------------------
-    | WYSIWYG Backend Editor
-    |--------------------------------------------------------------------------
-    | Define which editor you would like to use for the backend wysiwygs.
-    | These classes are event handlers, listening to EditorIsRendering
-    | you can define your own handlers and use them here
-    | Options:
-    | - \Modules\Core\Events\Handlers\LoadCkEditor::class
-    | - \Modules\Core\Events\Handlers\LoadSimpleMde::class
-    */
-    'wysiwyg-handler' => \Modules\Core\Events\Handlers\LoadCkEditor::class,
+   /*
+   |--------------------------------------------------------------------------
+   | WYSIWYG Backend Editor
+   |--------------------------------------------------------------------------
+   | Define which editor you would like to use for the backend wysiwygs.
+   | These classes are event handlers, listening to EditorIsRendering
+   | you can define your own handlers and use them here
+   | Options:
+   | - \Modules\Core\Events\Handlers\LoadCkEditor::class
+   | - \Modules\Core\Events\Handlers\LoadSimpleMde::class
+   */
+   'wysiwyg-handler' => \Modules\Core\Events\Handlers\LoadCkEditor::class,
     /*
     |--------------------------------------------------------------------------
     | Custom CKeditor configuration file
@@ -63,22 +63,22 @@ return [
     | Backend and Frontend routes.
     */
     'middleware' => [
-        'backend' => [
-            'auth.admin',
-        ],
-        'frontend' => [
-        ],
-        'api' => [
-            'api',
-        ],
+       'backend' => [
+           'auth.admin',
+       ],
+       'frontend' => [
+       ],
+       'api' => [
+           'api',
+       ],
     ],
 
-    /*
-    |--------------------------------------------------------------------------
-    | Define which assets will be available through the asset manager
-    |--------------------------------------------------------------------------
-    | These assets are registered on the asset manager
-    */
+   /*
+   |--------------------------------------------------------------------------
+   | Define which assets will be available through the asset manager
+   |--------------------------------------------------------------------------
+   | These assets are registered on the asset manager
+   */
     'admin-assets' => [
         // Css
         'bootstrap.css' => ['theme' => 'vendor/bootstrap/dist/css/bootstrap.min.css'],
@@ -87,8 +87,8 @@ return [
         'alertify.default.css' => ['theme' => 'css/vendor/alertify/alertify.default.css'],
         'dataTables.bootstrap.css' => ['theme' => 'vendor/datatables.net-bs/css/dataTables.bootstrap.min.css'],
         'icheck.blue.css' => ['theme' => 'vendor/iCheck/skins/flat/blue.css'],
-        'AdminLTE.css' => ['theme' => 'vendor/admin-lte/dist/css/AdminLTE.css'],
-        'AdminLTE.all.skins.css' => ['theme' => 'vendor/admin-lte/dist/css/skins/_all-skins.min.css'],
+        'BackendClickennet.css' => ['theme' => 'vendor/admin-lte/dist/css/BackendClickennet.css'],
+        'BackendClickennet.all.skins.css' => ['theme' => 'vendor/admin-lte/dist/css/skins/_all-skins.min.css'],
         'asgard.css' => ['theme' => 'css/asgard.css'],
         //'gridstack.css' => ['module' => 'dashboard:vendor/gridstack/dist/gridstack.min.css'],
         'gridstack.css' => ['module' => 'dashboard:gridstack/gridstack.min.css'],
@@ -135,29 +135,10 @@ return [
     */
     'admin-required-assets' => [
         'css' => [
-            'bootstrap.css',
-            'font-awesome.css',
-            'dataTables.bootstrap.css',
-            'icheck.blue.css',
-            'AdminLTE.css',
-            'AdminLTE.all.skins.css',
-            'animate.css',
-            'pace.css',
-            'selectize-default.css',
-            'asgard.css',
+            
         ],
         'js' => [
-            'bootstrap.js',
-            'mousetrap.js',
-            'icheck.js',
-            'jquery.dataTables.js',
-            'dataTables.bootstrap.js',
-            'jquery.slug.js',
-            'keypressAction.js',
-            'adminlte.js',
-            'pace.js',
-            'selectize.js',
-            'main.js',
+            
         ],
     ],
 
@@ -178,5 +159,5 @@ return [
     | Check if asgard was installed
     |--------------------------------------------------------------------------
     */
-    'is_installed' => env('INSTALLED', false),
+    'is_installed' => env('INSTALLED', false)
 ];
